@@ -10,7 +10,7 @@ namespace Snake
 	{
 		static void Main( string[] args )
 		{
-			Console.SetBufferSize( 80, 25 );
+			Console.SetWindowSize( 80, 25 );
 
 			Walls walls = new Walls( 80, 25 );
 			walls.Draw();
@@ -59,10 +59,9 @@ namespace Snake
 			Console.ForegroundColor = ConsoleColor.Red;
 			Console.SetCursorPosition( xOffset, yOffset++ );
 			WriteText( "============================", xOffset, yOffset++ );
-			WriteText( "И Г Р А    О К О Н Ч Е Н А", xOffset + 1, yOffset++ );
+			WriteText( "GAME OVER!", xOffset + 1, yOffset++ );
 			yOffset++;
-			WriteText( "Автор: Евгений Картавец", xOffset + 2, yOffset++ );
-			WriteText( "Специально для GeekBrains", xOffset + 1, yOffset++ );
+			WriteText( "Try Again.", xOffset + 1, yOffset++ );
 			WriteText( "============================", xOffset, yOffset++ );
 		}
 
